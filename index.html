@@ -2,10 +2,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Shiksha Saarthi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
-      .bg{
+      body{
         /* background-image: url("https://images.squarespace-cdn.com/content/v1/5421b6e2e4b0a6db313b8b24/1613932175243-LWAQF519CTRPKQN4XJVC/image-from-rawpixel-id-2620215-jpeg.jpg"); */
         background-image: url("uploads/bg.png");
         background-color: #000117;
@@ -42,30 +42,29 @@
       }
 
       .pic{
-        /* margin-top: 5%; */
-        height: 80%;
         display: flex;
-        /* align-items: center;
-        justify-content: flex-end; */
         justify-content: flex-end;
-        flex-wrap: wrap;
-        align-content: flex-end;
-        margin-right: 10%;
-        margin-bottom: 5%;
       }
 
-      .main{
-        margin-top: 1%;
+      .img {
+        width: 60%;
+        display: flex;
       }
-      .img{
-        width: 50%;
-        /* height: 80%; */
+
+      .box{
+        width: 90%;
+        height: 90%;
+        display: flex;
+        margin: auto;
+        justify-content: flex-end;
+        align-items: center;
       }
+
     </style>
   </head>
   <body data-bs-theme="dark">
-<div class="bg">
-    <nav class="navbar navbar-expand-lg">
+
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <div class="right">
           <a class="navbar-brand " href="#"><img src="uploads/LOGO_Name-02.png" alt="Shiksha Saarthi" width="250" ></a>
@@ -76,10 +75,10 @@
         <div class="left me-3">
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+              <li class="nav-item me-5">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown me-5">
                 <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Resources
                 </a>
@@ -107,12 +106,12 @@
       </nav>
 
       <div class="main">
-        <div class="leftText"></div>
-        <div class="pic">
-          <img class="img" src="uploads/landPic.png">
+        <div class="box">
+          <div class="pic">
+            <img class="img" src="uploads/landPic.png">
+          </div>
         </div>
       </div>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
