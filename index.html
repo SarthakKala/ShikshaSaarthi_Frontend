@@ -42,12 +42,14 @@
       }
 
       .pic{
+        height: 90%;
         display: flex;
         justify-content: flex-end;
       }
 
       .img {
-        width: 60%;
+        /* width: 60%; */
+        height: 90%;
         display: flex;
       }
 
@@ -58,6 +60,22 @@
         margin: auto;
         justify-content: flex-end;
         align-items: center;
+        margin-top: 20px;
+      }
+
+      .right{
+        width: 70%;
+      }
+
+      .left{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+      }
+
+      p{
+        color: #bf84ec;
       }
 
     </style>
@@ -66,13 +84,13 @@
 
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <div class="right">
+          <div class="rightnav">
           <a class="navbar-brand " href="#"><img src="uploads/LOGO_Name-02.png" alt="Shiksha Saarthi" width="250" ></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
-        <div class="left me-3">
+        <div class="leftnav me-3">
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item me-5">
@@ -108,7 +126,15 @@
       <div class="main">
         <div class="box">
           <div class="pic">
+            <div class="left">
+              <h2><b>HELLO SARTHAK,</b></h2>
+              <br><br>
+              <h2><b>WELCOME TO SHIKSHA SAARTHI.</b></h2>
+              <p><b>THE CORRECT <br> PLACE TO LEARN <br> AND BE <br> EDUCATED</b></p>
+            </div>
+            <div class="right">
             <img class="img" src="uploads/landPic.png">
+          </div>
           </div>
         </div>
       </div>
