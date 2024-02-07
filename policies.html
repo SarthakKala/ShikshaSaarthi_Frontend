@@ -2,12 +2,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Govt Policies</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         body{
         /* background-image: url("https://images.squarespace-cdn.com/content/v1/5421b6e2e4b0a6db313b8b24/1613932175243-LWAQF519CTRPKQN4XJVC/image-from-rawpixel-id-2620215-jpeg.jpg"); */
-        background-image: url("uploads/policy_bg2.jpg");
+        background-image: url("https://images.pexels.com/photos/7130555/pexels-photo-7130555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
         background-color: #000117;
         background-position: center;
         background-repeat: no-repeat;
@@ -21,7 +21,7 @@
       }
 
       .navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
-        color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
       }
 
       .container-fluid {
@@ -46,18 +46,71 @@
         /* margin: -20px; */
       }
 
-      .heads ul{
-        list-style: none;
+      .heading{
+        width: 80%;
+        margin: auto;
+        padding-top: 5%;
+        color: #000117;
+        text-align: justify;
       }
 
+      .heading h1{
+        /* font-family: Bahnschrift; */
+        text-decoration: underline;
+        font-weight: 500;        
+      }
+
+      .heading p{
+        font-family: opensans;
+        font-size: large;
+      }
+
+      .heading ul{
+        font-weight: bold;
+        padding: auto;
+        list-style: none;
+        font-size: large;
+      }
+
+      .heading li{
+        color: rgb(156, 70, 236);
+        padding: 8px;
+      }
+
+      .heading li:hover{
+        color: whitesmoke;
+        cursor: pointer;
+      }
+      
+      .box{
+        text-align: center;
+        width: 300px;
+        height: 50px;
+        margin-bottom: 10px;
+        background-color: #fffcf4;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        box-shadow: 5px 5px 5px rgb(200, 183, 244);
+        transition: 0.5s ease all;
+      }
+
+      .box:hover{
+        background-color: #bc6784;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        transition: 0.5s ease all;
+      }
 
     </style>
+    <script src="script/policies.html"></script>
   </head>
   <body data-bs-theme="dark">
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <div class="rightnav">
-          <a class="navbar-brand " href="#"><img src="uploads/LOGO_Name-02.png" alt="Shiksha Saarthi" width="250" ></a>
+          <a class="navbar-brand " href="#"><img src="uploads/LOGO_Name-01.png" alt="Shiksha Saarthi" width="250" ></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -97,17 +150,24 @@
         </div>
     </nav>
 
+    <div class="heading">
+      <h1>Government Initiatives & Scholarships</h1>  <br><br>
+      <p>Welcome to a gateway of opportunities for a brighter tomorrow. This page unfolds the tapestry of government policies aimed at uplifting communities through education, healthcare, and overall well-being. Discover the scholarships that can be a stepping stone towards a future filled with possibilities. Let's embark on a journey of empowerment together.</p>
+      <ul>
+        <li class="box" id="catTxt" onclick="catTxt()">Education</li>
+        <li class="box" id="catTxt" onclick="catTxt()">HealthCare</li>
+        <li class="box" id="catTxt" onclick="catTxt()">Nutrition</li>
+        <li class="box" id="catTxt" onclick="catTxt()">Community Development</li>
+      </ul>
+      <ul>
+        <li>National Scholarships</li>
+        <li>State-specific Scholarships</li>
+        <li>NGO Initiatives</li>
+      </ul>
+    </div>
     <div class="container">
-        <div class="card">
             <div class="heads">
-                <ul>
-                    <li>head1</li>
-                    <li>head1</li>
-                    <li>head1</li>
-                    <li>head1</li>
-                    <li>head1</li>
-                    <li>head1</li>
-                </ul>
+                
             </div>
         </div>
     </div>
