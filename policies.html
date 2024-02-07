@@ -7,11 +7,11 @@
     <style>
         body{
         /* background-image: url("https://images.squarespace-cdn.com/content/v1/5421b6e2e4b0a6db313b8b24/1613932175243-LWAQF519CTRPKQN4XJVC/image-from-rawpixel-id-2620215-jpeg.jpg"); */
-        background-image: url("https://images.pexels.com/photos/7130555/pexels-photo-7130555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-        background-color: #000117;
+        /* background-image: url("https://images.pexels.com/photos/7130555/pexels-photo-7130555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); */
+        background-color: #e9d9ff;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+        /* background-size: cover; */
         height: 100%;
       }
 
@@ -55,14 +55,15 @@
       }
 
       .heading h1{
-        /* font-family: Bahnschrift; */
-        text-decoration: underline;
-        font-weight: 500;        
+        font-family: century gothic;
+        /* text-decoration: underline; */
+        font-weight: bolder;        
       }
 
       .heading p{
-        font-family: opensans;
+        font-family: century;
         font-size: large;
+        margin-bottom: 40px;
       }
 
       .heading ul{
@@ -101,6 +102,27 @@
         border-top-right-radius: 0px;
         border-bottom-left-radius: 0px;
         transition: 0.5s ease all;
+      }
+      
+      .scndHead{
+        width: fit-content;
+        display: block;
+      }
+
+      .scndHead li:hover{
+        color:  rgb(131, 32, 184);
+      }
+
+      .DelhiTXT li{
+        font-weight: 500;
+      }
+
+      .DelhiTXT li:hover{
+        color: rgb(156, 70, 236);
+      }
+
+      .DelhiTXT p{
+        margin-bottom: 5px;        
       }
 
     </style>
@@ -154,16 +176,44 @@
       <h1>Government Initiatives & Scholarships</h1>  <br><br>
       <p>Welcome to a gateway of opportunities for a brighter tomorrow. This page unfolds the tapestry of government policies aimed at uplifting communities through education, healthcare, and overall well-being. Discover the scholarships that can be a stepping stone towards a future filled with possibilities. Let's embark on a journey of empowerment together.</p>
       <ul>
-        <li class="box" id="catTxt" onclick="catTxt()">Education</li>
-        <li class="box" id="catTxt" onclick="catTxt()">HealthCare</li>
-        <li class="box" id="catTxt" onclick="catTxt()">Nutrition</li>
-        <li class="box" id="catTxt" onclick="catTxt()">Community Development</li>
+        <li class="box hd1" onclick="catTxt()">Education</li>
+        <li class="box hd1" onclick="catTxt()">HealthCare</li>
+        <li class="box hd1" onclick="catTxt()">Nutrition</li>
+        <li class="box hd1" onclick="catTxt()">Community Development</li>
       </ul>
-      <ul>
-        <li>National Scholarships</li>
-        <li>State-specific Scholarships</li>
-        <li>NGO Initiatives</li>
-      </ul>
+      <span class="scndHead">
+        <ul>
+          <li>National Scholarships</li>
+          <span class="Nat"></span>
+          <li>State-specific Scholarships</li>
+          <span class="Stat"></span>
+          <li>NGO Initiatives</li>
+          <span class="NGO"></span>
+        </ul>
+      </span>
+      <div class="eduNat">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate quisquam quo dolore odit fugit tenetur impedit praesentium earum laudantium debitis, vitae cumque nisi ad porro quaerat ea, rem temporibus dolorum blanditiis quidem autem aut voluptas ex. Itaque quos suscipit tempora eum quidem tenetur officia, saepe veniam illum incidunt molestias facilis esse, accusantium, non corporis minima culpa eaque et aspernatur a! Harum sed laudantium modi enim, inventore dolores aperiam corporis iusto porro doloremque error, ipsa ipsam reprehenderit. Debitis quibusdam ut tempora iure a numquam. Pariatur provident odio doloribus enim voluptas voluptatum, quo deleniti, molestias magnam fugiat accusamus repellat architecto nulla non!</p>
+      </div>
+      <div class="eduState">
+        <select name="states" id="states">
+          <option value="none">Select State</option>
+          <option value="Andhra Pradesh">Andhra Pradesh</option>
+          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+          <option value="Assam">Assam</option>
+          <option value="Bihar">Bihar</option>
+          <option value="Chhattisgarh">Chhattisgarh</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Punjab">Punjab</option>
+        </select>
+      </div>
+      <div class="DelhiTXT">
+        <h5>Dr. Hargobind Khurana Scholarship Scheme:</h5>
+        <p>
+          <li>This scholarship is offered to students belonging to economically weaker sections of society for pursuing higher education </li>
+          <li>Key points: Financial assistance for tuition fees, books, and other educational expenses.</li>
+          <li>Application: Apply through the Department of Welfare of Scheduled Castes, Backward Classes & Minorities, Government of Punjab.</li>
+        </p>
+      </div>
     </div>
     <div class="container">
             <div class="heads">
