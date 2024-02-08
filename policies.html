@@ -79,7 +79,7 @@
       }
 
       .heading li:hover{
-        color: whitesmoke;
+        color: rgb(255, 255, 255);
         cursor: pointer;
       }
       
@@ -92,43 +92,268 @@
         border-top-right-radius: 10px;
         border-bottom-left-radius: 10px;
         box-shadow: 5px 5px 5px rgb(200, 183, 244);
-        transition: 0.5s ease all;
+        transition: 0.2s ease all;
       }
 
       .box:hover{
-        background-color: #bc6784;
+        background-color: #ff0661;
         border-top-left-radius: 10px;
         border-bottom-right-radius: 10px;
         border-top-right-radius: 0px;
         border-bottom-left-radius: 0px;
-        transition: 0.5s ease all;
+        transition: 0.2s ease all;
+        /* translate: 4px 4px; */
+      }
+
+      .box::after{
+        
+        transform: ease all 0.5s;
       }
       
-      .scndHead{
+      .specHeads{
         width: fit-content;
         display: block;
       }
 
-      .scndHead li:hover{
-        color:  rgb(131, 32, 184);
+      .specHeads li:hover{
+        color:  rgb(156, 70, 236);
+        cursor: text;
       }
 
       .DelhiTXT li{
         font-weight: 500;
+        display: none;
+      }
+
+      .DelhiTXT h5{
+        display: none;
       }
 
       .DelhiTXT li:hover{
         color: rgb(156, 70, 236);
+        cursor: text;
       }
 
       .DelhiTXT p{
-        margin-bottom: 5px;        
+        margin-bottom: 5px;   
+        display: none;     
       }
 
+      .eduNat p{
+        display: none;
+      }
+
+      .eduNat li{
+        display: none;
+      }
+      
+      .eduNat h5{
+        display: none;
+      }
+
+      .eduNgo p{
+        display: none;
+      }
+
+      .eduState select{
+        display: none;
+      }
+
+      
+      
+      .site-footer
+    {
+      background-color:#26272b;
+      padding:45px 0 20px;
+      font-size:15px;
+      line-height:24px;
+      color:#737373;
+    }
+    .site-footer hr
+    {
+      border-top-color:#bbb;
+      opacity:0.5
+    }
+    .site-footer hr.small
+    {
+      margin:20px 0
+    }
+    .site-footer h6
+    {
+      color:#fff;
+      font-size:16px;
+      text-transform:uppercase;
+      margin-top:5px;
+      letter-spacing:2px
+    }
+    .site-footer a
+    {
+      color:#737373;
+    }
+    .site-footer a:hover
+    {
+      color:#3366cc;
+      text-decoration:none;
+    }
+    .footer-links
+    {
+      padding-left:0;
+      list-style:none
+    }
+    .footer-links li
+    {
+      display:block
+    }
+    .footer-links a
+    {
+      color:#737373
+    }
+    .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+    {
+      color:#3366cc;
+      text-decoration:none;
+    }
+    .footer-links.inline li
+    {
+      display:inline-block
+    }
+    .site-footer .social-icons
+    {
+      text-align:right
+    }
+    .site-footer .social-icons a
+    {
+      width:40px;
+      height:40px;
+      line-height:40px;
+      margin-left:6px;
+      margin-right:0;
+      border-radius:100%;
+      background-color:#33353d
+    }
+    .copyright-text
+    {
+      margin:0
+    }
+    @media (max-width:991px)
+    {
+      .site-footer [class^=col-]
+      {
+        margin-bottom:30px
+      }
+    }
+    @media (max-width:767px)
+    {
+      .site-footer
+      {
+        padding-bottom:0
+      }
+      .site-footer .copyright-text,.site-footer .social-icons
+      {
+        text-align:center
+      }
+    }
+    .social-icons
+    {
+      padding-left:0;
+      margin-bottom:0;
+      list-style:none
+    }
+    .social-icons li
+    {
+      display:inline-block;
+      margin-bottom:4px
+    }
+    .social-icons li.title
+    {
+      margin-right:15px;
+      text-transform:uppercase;
+      color:#96a2b2;
+      font-weight:700;
+      font-size:13px
+    }
+    .social-icons a{
+      background-color:#eceeef;
+      color:#818a91;
+      font-size:16px;
+      display:inline-block;
+      line-height:44px;
+      width:44px;
+      height:44px;
+      text-align:center;
+      margin-right:8px;
+      border-radius:100%;
+      -webkit-transition:all .2s linear;
+      -o-transition:all .2s linear;
+      transition:all .2s linear
+    }
+    .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+    {
+      color:#fff;
+      background-color:#29aafe
+    }
+    .social-icons.size-sm a
+    {
+      line-height:34px;
+      height:34px;
+      width:34px;
+      font-size:14px
+    }
+    .social-icons a.facebook:hover
+    {
+      background-color:#3b5998
+    }
+    .social-icons a.twitter:hover
+    {
+      background-color:#00aced
+    }
+    .social-icons a.linkedin:hover
+    {
+      background-color:#007bb6
+    }
+    .social-icons a.dribbble:hover
+    {
+      background-color:#ea4c89
+    }
+    @media (max-width:767px)
+    {
+      .social-icons li.title
+      {
+        display:block;
+        margin-right:0;
+        font-weight:600
+      }
+    }
+
+
+    .card {
+      overflow: visible;
+      width: 190px;
+      height: 254px;
+    }
+
+    .cards{
+      display: flex;
+      /* height: 500px; */
+      object-fit: contain;
+      flex-direction: column;
+    }
+
+    .cards img{
+      max-width:100%;
+      height:auto;
+    }
+
+    .three{
+      display: flex;
+    }
+    
     </style>
-    <script src="script/policies.html"></script>
+    <script src="script/policies.js"></script>
   </head>
+
   <body data-bs-theme="dark">
+
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <div class="rightnav">
@@ -176,37 +401,93 @@
       <h1>Government Initiatives & Scholarships</h1>  <br><br>
       <p>Welcome to a gateway of opportunities for a brighter tomorrow. This page unfolds the tapestry of government policies aimed at uplifting communities through education, healthcare, and overall well-being. Discover the scholarships that can be a stepping stone towards a future filled with possibilities. Let's embark on a journey of empowerment together.</p>
       <ul>
-        <li class="box hd1" onclick="catTxt()">Education</li>
-        <li class="box hd1" onclick="catTxt()">HealthCare</li>
-        <li class="box hd1" onclick="catTxt()">Nutrition</li>
-        <li class="box hd1" onclick="catTxt()">Community Development</li>
+        <li class="box" onclick="catEduTxt()">Education</li>
+        <li class="box" onclick="catHealthTxt()">HealthCare</li>
+        <li class="box" onclick="catNutriTxt()">Nutrition</li>
+        <li class="box" onclick="catDevTxt()">Community Development</li>
       </ul>
-      <span class="scndHead">
-        <ul>
-          <li>National Scholarships</li>
-          <span class="Nat"></span>
-          <li>State-specific Scholarships</li>
-          <span class="Stat"></span>
-          <li>NGO Initiatives</li>
-          <span class="NGO"></span>
-        </ul>
-      </span>
-      <div class="eduNat">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate quisquam quo dolore odit fugit tenetur impedit praesentium earum laudantium debitis, vitae cumque nisi ad porro quaerat ea, rem temporibus dolorum blanditiis quidem autem aut voluptas ex. Itaque quos suscipit tempora eum quidem tenetur officia, saepe veniam illum incidunt molestias facilis esse, accusantium, non corporis minima culpa eaque et aspernatur a! Harum sed laudantium modi enim, inventore dolores aperiam corporis iusto porro doloremque error, ipsa ipsam reprehenderit. Debitis quibusdam ut tempora iure a numquam. Pariatur provident odio doloribus enim voluptas voluptatum, quo deleniti, molestias magnam fugiat accusamus repellat architecto nulla non!</p>
+      <div class="specHeads">
+
+        <span class="NatHead" id="NatHead">
+          <ul>
+            <li>NATIONAL SCHOLARSHIP</li>
+            <span class="Nat" id="Nat" onload="hideAllTxt()"></span>
+          </ul>
+        </span>
+
+        <span class="StatHead" id="StatHead">
+          <ul>
+            <li>STATE-SPECIFIC SCHOLARSHIPS</li>
+            <span class="Stat" id="Stat" onload="hideAllTxt()"></span>
+          </ul>
+        </span>
+
+        <span class="ngoHead" id="ngoHead">
+          <ul>
+            <li>NGO INITIATIVES</li>
+            <span class="ngo" id="ngo" onload="hideAllTxt()"></span>
+          </ul>
+        </span>
+
       </div>
-      <div class="eduState">
-        <select name="states" id="states">
-          <option value="none">Select State</option>
-          <option value="Andhra Pradesh">Andhra Pradesh</option>
-          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-          <option value="Assam">Assam</option>
-          <option value="Bihar">Bihar</option>
-          <option value="Chhattisgarh">Chhattisgarh</option>
-          <option value="Delhi">Delhi</option>
-          <option value="Punjab">Punjab</option>
+
+
+<!-- National -->
+    <div class="eduNat" id="eduNat">
+        <p>
+          <h5>National Scheme of Incentive to Girls for Secondary Education (NSIGSE):</h5>
+            <ul>
+            	<li>Aims to promote the enrollment of girl students in secondary education and reduce gender disparities</li>
+            	<li>Key points: Cash incentive for completing secondary education, financial support for purchase of books and uniforms</li>
+            	<li>Application: Automatic for eligible girl students enrolled in government and government-aided schools</li>
+            </ul>
+        </p>
+    </div>
+
+
+<!-- State wise -->
+     <div class="eduState" id="eduState">
+        <select name="states" id="states" onclick="showStatTxt(this)">
+          <option id="none" value="none">Select State</option>
+          <option id="Andhra" value="Andhra">Andhra Pradesh</option>
+          <option id="Arunachal" value="Arunachal">Arunachal Pradesh</option>
+          <option id="Assam" value="Assam">Assam</option>
+          <option id="Bihar" value="Bihar">Bihar</option>
+          <option id="Chhattisgarh" value="Chhattisgarh">Chhattisgarh</option>
+          <option id="Goa" value="Goa">Goa</option>
+          <option id="Gujarat" value="Gujarat">Gujarat</option>
+          <option id="Haryana" value="Haryana">Haryana</option>
+          <option id="Himachal" value="Himachal">Himachal</option>
+          <option id="Jharkhand"value="Jharkhand">Jharkhand</option>
+          <option id="Karnataka" value="Karnataka">Karnataka</option>
+          <option id="Kerala" value="Kerala">Kerala</option>
+          <option id="Madhya" value="Madhya">Madhya</option>
+          <option id="Maharashtra" value="Maharashtra">Maharashtra</option>
+          <option id="Manipur" value="Manipur">Manipur</option>
+          <option id="Meghalya" value="Meghalya">Meghalya</option>
+          <option id="Mizoram" value="Mizoram">Mizoram</option>
+          <option id="Nagaland" value="Nagaland">Nagaland</option>
+          <option id="Odisha" value="Odisha">Odisha</option>
+          <option id="Punjab" value="Punjab">Punjab</option>
+          <option id="Rajasthan" value="Rajasthan">Rajasthan</option>
+          <option id="Sikkim" value="Sikkim">Sikkim</option>
+          <option id="Tamil" value="Tamil">Tamil</option>
+          <option id="Telangana" value="Telangana">Telangana</option>
+          <option id="Tripura" value="Tripura">Tripura</option>
+          <option id="Uttarakhand" value="Uttarakhand">Uttarakhand</option>
+          <option id="Uttar" value="Uttar">Uttar Pradesh</option>
+          <option id="West" value="West">West Bengal</option>
         </select>
+        <span class="statTxt" id="statTxt"></span>
       </div>
-      <div class="DelhiTXT">
+
+<!-- By NGOs -->
+      <div class="eduNgo" id="eduNgo">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus et expedita nesciunt ea ducimus corrupti aliquid molestiae doloremque tempore, totam vel deserunt, officiis obcaecati debitis possimus illum? Quae esse, maxime et ipsa sint minus quod quo dicta sequi perspiciatis at harum architecto iusto ut consequuntur inventore laboriosam ex aliquid asperiores?</p>
+      </div>
+ <!-- FOR HARYANA  -->
+      
+      <div class="DelhiTXT" id="DelhiTXT">
         <h5>Dr. Hargobind Khurana Scholarship Scheme:</h5>
         <p>
           <li>This scholarship is offered to students belonging to economically weaker sections of society for pursuing higher education </li>
@@ -215,12 +496,63 @@
         </p>
       </div>
     </div>
-    <div class="container">
+
+<!-- FOR PUNJAB -->
+
+
+
+
+
+    <!-- <div class="container">
             <div class="heads">
                 
             </div>
         </div>
-    </div>
+    </div> -->
+
+
+<!-- Site footer -->
+<footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About Us</h6>
+            <p class="text-justify"></p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Our Team</h6>
+            <ul class="footer-links">
+              <li><a href="https://www.linkedin.com/in/arnav-gupta-a810ba260/" target="_blank">Arnav Gupta</a></li>
+              <li><a href="https://www.linkedin.com/in/106-jatinchhabra/" target="_blank">Jatin Chhabra</a></li>
+              <li><a href="https://www.linkedin.com/in/sarthakkala/" target="_blank">Sarthak Kala</a></li>
+              <li><a href="https://www.linkedin.com/in/navansh-krishna-goswami-341713248/" target="_blank">Navansh Goswami</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="http://scanfcode.com/about/">About Us</a></li>
+              <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+              <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
+              <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+              <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2024 All Rights Reserved by 
+         <a href="#">Shiksha Saarthi</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
