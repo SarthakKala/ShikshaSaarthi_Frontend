@@ -105,8 +105,8 @@
         /* translate: 4px 4px; */
       }
 
-      .box::after{
-        
+      .box:active{
+        scale: 1.1;
         transform: ease all 0.5s;
       }
       
@@ -120,21 +120,21 @@
         cursor: text;
       }
 
-      .DelhiTXT li{
+      .PunjabTXT li{
         font-weight: 500;
         display: none;
       }
 
-      .DelhiTXT h5{
+      .PunjabTXT h5{
         display: none;
       }
 
-      .DelhiTXT li:hover{
+      .PunjabTXT li:hover{
         color: rgb(156, 70, 236);
         cursor: text;
       }
 
-      .DelhiTXT p{
+      .PunjabTXT p{
         margin-bottom: 5px;   
         display: none;     
       }
@@ -158,8 +158,6 @@
       .eduState select{
         display: none;
       }
-
-      
       
       .site-footer
     {
@@ -325,7 +323,6 @@
       }
     }
 
-
     .card {
       overflow: visible;
       width: 190px;
@@ -347,7 +344,15 @@
     .three{
       display: flex;
     }
-    
+
+    .specHeads{
+      display: none;
+    }
+
+    .mainHeads{
+      display: none;
+    }
+
     </style>
     <script src="script/policies.js"></script>
   </head>
@@ -398,15 +403,24 @@
     </nav>
 
     <div class="heading">
-      <h1>Government Initiatives & Scholarships</h1>  <br><br>
+      <h1>Government Initiatives & Scholarships</h1>  
+      <br><br>
       <p>Welcome to a gateway of opportunities for a brighter tomorrow. This page unfolds the tapestry of government policies aimed at uplifting communities through education, healthcare, and overall well-being. Discover the scholarships that can be a stepping stone towards a future filled with possibilities. Let's embark on a journey of empowerment together.</p>
-      <ul>
+
+      <center>
+        <!-- <input >Show All</input> -->
+        <input type="button" class="showAll" id="showAll" onclick="showAllHeads()" value="Show All">
+      </center>
+
+      <br><br>
+      <ul id="mainHeads" class="mainHeads">
         <li class="box" onclick="catEduTxt()">Education</li>
         <li class="box" onclick="catHealthTxt()">HealthCare</li>
         <li class="box" onclick="catNutriTxt()">Nutrition</li>
         <li class="box" onclick="catDevTxt()">Community Development</li>
       </ul>
-      <div class="specHeads">
+
+      <div class="specHeads" id="specHeads">
 
         <span class="NatHead" id="NatHead">
           <ul>
@@ -485,21 +499,31 @@
       <div class="eduNgo" id="eduNgo">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus et expedita nesciunt ea ducimus corrupti aliquid molestiae doloremque tempore, totam vel deserunt, officiis obcaecati debitis possimus illum? Quae esse, maxime et ipsa sint minus quod quo dicta sequi perspiciatis at harum architecto iusto ut consequuntur inventore laboriosam ex aliquid asperiores?</p>
       </div>
- <!-- FOR HARYANA  -->
-      
-      <div class="DelhiTXT" id="DelhiTXT">
+
+ <!-- FOR PUNJAB  -->
+      <div class="PunjabTXT" id="PunjabTXT">
+        <b></b>
         <h5>Dr. Hargobind Khurana Scholarship Scheme:</h5>
         <p>
           <li>This scholarship is offered to students belonging to economically weaker sections of society for pursuing higher education </li>
           <li>Key points: Financial assistance for tuition fees, books, and other educational expenses.</li>
           <li>Application: Apply through the Department of Welfare of Scheduled Castes, Backward Classes & Minorities, Government of Punjab.</li>
         </p>
+        <br>
+        <h5>Post-Matric Scholarship Scheme for Scheduled Caste Students:</h5>
+        <p>
+          <li>Provides financial assistance to students belonging to Scheduled Caste (SC) communities for pursuing post-matriculation education.</li>
+          <li>Key points: Covers tuition fees, maintenance allowance, and other incidental expenses.</li>
+          <li>Application: Apply online through the National Scholarship Portal (NSP) or the respective State Government scholarship portal.</li>
+        </p>
+        <h5>Mai Bhago Scheme for Girls' Education:</h5>
+        <p>
+          <li>Aims to improve girls' education by providing financial assistance to economically backward families for educating their daughters.</li>
+          <li>Key points: Financial support for tuition fees, books, and other educational expenses.</li>
+          <li>Application: Apply through the Department of Education, Government of Punjab.</li>
+        </p>
       </div>
     </div>
-
-<!-- FOR PUNJAB -->
-
-
 
 
 
