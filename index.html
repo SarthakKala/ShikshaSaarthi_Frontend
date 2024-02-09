@@ -53,6 +53,7 @@
         /* width: 60%; */
         height: 90%;
         display: flex;
+        margin-right: 20px;
       }
 
       .box{
@@ -481,6 +482,25 @@
   font-weight: 500;
 }
 
+.head1{
+  font-size: 60px;
+}
+
+.head2{
+  font-size: 40px;
+}
+
+.head3{
+  font-size: 20px;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(style/SAMAN___.TTF);
+}
+
+
+
     </style>
   </head>
   <body data-bs-theme="dark">
@@ -534,10 +554,10 @@
         <div class="box">
           <div class="pic">
             <div class="left">
-              <h2><b>HELLO SARTHAK,</b></h2>
+              <h2 class="head1"><span><b>HELLO </b></span><span class="cursor" style="font-family: myFirstFont; ">SARTHAK,</span></h2>
               <br><br>
-              <h2><b>WELCOME TO SHIKSHA SAARTHI.</b></h2>
-              <p class="land"><b>THE CORRECT <br> PLACE TO LEARN <br> AND BE <br> EDUCATED</b></p>
+              <h2 class="head2"><b>WELCOME TO <br> SHIKSHA SAARTHI.</b></h2>
+              <p class="land head3"><b></b>THE CORRECT <br> PLACE TO LEARN<br> AND BE <br>EDUCATED</b></p>
             </div>
             <div class="right">
             <img class="img" src="uploads/landPic.png">
