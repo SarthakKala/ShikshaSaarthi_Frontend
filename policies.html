@@ -49,19 +49,21 @@
       .heading{
         width: 80%;
         margin: auto;
-        padding-top: 5%;
-        color: #000117;
+        color: #1c0345;
         text-align: justify;
+        font-family: Georgia, 'Times New Roman', Times, serif;
       }
 
       .heading h1{
         font-family: century gothic;
         /* text-decoration: underline; */
-        font-weight: bolder;        
+        padding-top: 5%;
+        font-weight: 900;        
+        text-transform: uppercase;
       }
 
       .heading p{
-        font-family: century;
+        /* font-family: century; */
         font-size: large;
         margin-bottom: 40px;
       }
@@ -151,7 +153,7 @@
         display: none;
       }
 
-      .eduNgo p{
+      .eduNgo .p{
         display: none;
       }
 
@@ -345,6 +347,24 @@
       display: flex;
     }
 
+    .showAll{
+      width: 200px;
+      height: 40px;
+      font-family: 'Times New Roman', Times, serif;
+      border-radius: 5px;
+      background-image: url("uploads/policy_bg2.jpg");
+      /* border: 0.5px solid rgb(120, 0, 240); */
+      border: none;
+      transition: ease all 0.1s;
+      box-shadow:  3px 3px 3px #1c1f6b;
+    }
+
+    .showAll:active{
+      box-shadow: inset 3px 3px 3px #1c1f6b;
+      translate: 1px 1px;
+      transition: ease all 0.1s;
+    }
+
     .specHeads{
       display: none;
     }
@@ -353,6 +373,32 @@
       display: none;
     }
 
+    .states{
+      background-image: url("uploads/policy_bg2.jpg");
+      color: #eee8e8;
+      padding: 10px 15px;
+      font-size: 15px;
+      font-weight: bold;
+      border: 2px solid transparent;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+
+    option{
+      /* display: none; */
+      font-size: 15px;
+      font-weight: 500;
+      font-family: 'Times New Roman', Times, serif;
+      position: absolute;
+      z-index: 1;
+      min-width: 200px;
+      color: #000117;
+      background-color: rgb(220, 191, 241);
+      /* border: 2px solid #544caf; */
+      border-radius: 0px 15px 15px 15px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    }
     </style>
     <script src="script/policies.js"></script>
   </head>
@@ -424,21 +470,21 @@
 
         <span class="NatHead" id="NatHead">
           <ul>
-            <li>NATIONAL SCHOLARSHIP</li>
+            <li><h3>NATIONAL SCHOLARSHIP</h3></li>
             <span class="Nat" id="Nat" onload="hideAllTxt()"></span>
           </ul>
         </span>
 
         <span class="StatHead" id="StatHead">
           <ul>
-            <li>STATE-SPECIFIC SCHOLARSHIPS</li>
+            <li><h3>STATE-SPECIFIC SCHOLARSHIPS </h3></li>
             <span class="Stat" id="Stat" onload="hideAllTxt()"></span>
           </ul>
         </span>
 
         <span class="ngoHead" id="ngoHead">
           <ul>
-            <li>NGO INITIATIVES</li>
+            <li><h3>NGO INITIATIVES </h3></li>
             <span class="ngo" id="ngo" onload="hideAllTxt()"></span>
           </ul>
         </span>
@@ -449,11 +495,29 @@
 <!-- National -->
     <div class="eduNat" id="eduNat">
         <p>
-          <h5>National Scheme of Incentive to Girls for Secondary Education (NSIGSE):</h5>
+          <h5>1. National Scheme of Incentive to Girls for Secondary Education (NSIGSE):</h5>
             <ul>
             	<li>Aims to promote the enrollment of girl students in secondary education and reduce gender disparities</li>
             	<li>Key points: Cash incentive for completing secondary education, financial support for purchase of books and uniforms</li>
             	<li>Application: Automatic for eligible girl students enrolled in government and government-aided schools</li>
+            </ul>
+        </p>
+        <br>
+        <p>
+          <h5>2. National Scholarship Portal (NSP):</h5>
+            <ul>
+            	<li>Provides a single platform for various scholarships offered by the central government, state governments, and other government agencies.</li>
+            	<li>Key points: Offers scholarships for students at different education levels based on merit and means.</li>
+            	<li>Application: Register and apply online on the NSP website (scholarships.gov.in).</li>
+            </ul>
+        </p>
+        <br>
+        <p>
+          <h5>3. Pradhan Mantri Scholarship Scheme for Central Armed Police Forces and Assam Rifles (PMSS):</h5>
+            <ul>
+            	<li>Offers scholarships to the wards of CAPF and Assam Rifles personnel martyred during duty.</li>
+            	<li>Key points: Financial support for higher education, including professional courses.</li>
+            	<li>Application: Apply through the respective CAPF or Assam Rifles welfare authorities.</li>
             </ul>
         </p>
     </div>
@@ -461,48 +525,62 @@
 
 <!-- State wise -->
      <div class="eduState" id="eduState">
-        <select name="states" id="states" onclick="showStatTxt(this)">
-          <option id="none" value="none">Select State</option>
-          <option id="Andhra" value="Andhra">Andhra Pradesh</option>
-          <option id="Arunachal" value="Arunachal">Arunachal Pradesh</option>
-          <option id="Assam" value="Assam">Assam</option>
-          <option id="Bihar" value="Bihar">Bihar</option>
-          <option id="Chhattisgarh" value="Chhattisgarh">Chhattisgarh</option>
-          <option id="Goa" value="Goa">Goa</option>
-          <option id="Gujarat" value="Gujarat">Gujarat</option>
-          <option id="Haryana" value="Haryana">Haryana</option>
-          <option id="Himachal" value="Himachal">Himachal</option>
-          <option id="Jharkhand"value="Jharkhand">Jharkhand</option>
-          <option id="Karnataka" value="Karnataka">Karnataka</option>
-          <option id="Kerala" value="Kerala">Kerala</option>
-          <option id="Madhya" value="Madhya">Madhya</option>
-          <option id="Maharashtra" value="Maharashtra">Maharashtra</option>
-          <option id="Manipur" value="Manipur">Manipur</option>
-          <option id="Meghalya" value="Meghalya">Meghalya</option>
-          <option id="Mizoram" value="Mizoram">Mizoram</option>
-          <option id="Nagaland" value="Nagaland">Nagaland</option>
-          <option id="Odisha" value="Odisha">Odisha</option>
-          <option id="Punjab" value="Punjab">Punjab</option>
-          <option id="Rajasthan" value="Rajasthan">Rajasthan</option>
-          <option id="Sikkim" value="Sikkim">Sikkim</option>
-          <option id="Tamil" value="Tamil">Tamil</option>
-          <option id="Telangana" value="Telangana">Telangana</option>
-          <option id="Tripura" value="Tripura">Tripura</option>
-          <option id="Uttarakhand" value="Uttarakhand">Uttarakhand</option>
-          <option id="Uttar" value="Uttar">Uttar Pradesh</option>
-          <option id="West" value="West">West Bengal</option>
+        <select name="states" class="states" id="states" onclick="showStatTxt(this)">
+          <div class="drop-content">
+            <option id="none" value="none">Select State</option>
+            <option id="Andhra" value="Andhra">Andhra Pradesh</option>
+            <option id="Arunachal" value="Arunachal">Arunachal Pradesh</option>
+            <option id="Assam" value="Assam">Assam</option>
+            <option id="Bihar" value="Bihar">Bihar</option>
+            <option id="Chhattisgarh" value="Chhattisgarh">Chhattisgarh</option>
+            <option id="Goa" value="Goa">Goa</option>
+            <option id="Gujarat" value="Gujarat">Gujarat</option>
+            <option id="Haryana" value="Haryana">Haryana</option>
+            <option id="Himachal" value="Himachal">Himachal</option>
+            <option id="Jharkhand"value="Jharkhand">Jharkhand</option>
+            <option id="Karnataka" value="Karnataka">Karnataka</option>
+            <option id="Kerala" value="Kerala">Kerala</option>
+            <option id="Madhya" value="Madhya">Madhya</option>
+            <option id="Maharashtra" value="Maharashtra">Maharashtra</option>
+            <option id="Manipur" value="Manipur">Manipur</option>
+            <option id="Meghalya" value="Meghalya">Meghalya</option>
+            <option id="Mizoram" value="Mizoram">Mizoram</option>
+            <option id="Nagaland" value="Nagaland">Nagaland</option>
+            <option id="Odisha" value="Odisha">Odisha</option>
+            <option id="Punjab" value="Punjab">Punjab</option>
+            <option id="Rajasthan" value="Rajasthan">Rajasthan</option>
+            <option id="Sikkim" value="Sikkim">Sikkim</option>
+            <option id="Tamil" value="Tamil">Tamil</option>
+            <option id="Telangana" value="Telangana">Telangana</option>
+            <option id="Tripura" value="Tripura">Tripura</option>
+            <option id="Uttarakhand" value="Uttarakhand">Uttarakhand</option>
+            <option id="Uttar" value="Uttar">Uttar Pradesh</option>
+            <option id="West" value="West">West Bengal</option>
+          </div>
         </select>
         <span class="statTxt" id="statTxt"></span>
       </div>
 
 <!-- By NGOs -->
       <div class="eduNgo" id="eduNgo">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus et expedita nesciunt ea ducimus corrupti aliquid molestiae doloremque tempore, totam vel deserunt, officiis obcaecati debitis possimus illum? Quae esse, maxime et ipsa sint minus quod quo dicta sequi perspiciatis at harum architecto iusto ut consequuntur inventore laboriosam ex aliquid asperiores?</p>
+        <div class="p">
+          <h5>Pratham:</h5>
+          Pratham is one of the largest NGOs working towards the provision of quality education to underprivileged children in India. Their initiatives include the "Read India" campaign, "Learning Camps," and "Pratham Institute," which focus on literacy and numeracy skills among children and youth
+            <li>Pratham's programs are often implemented in collaboration with local schools or community centers.</li>
+            <li>Beneficiaries can directly participate in Pratham's learning camps or vocational training programs by contacting their local Pratham chapter or visiting their website for more information.</li>
+            <br>
+            <h5>Akshara Foundation:</h5>
+            <p>Akshara Foundation works to ensure every child has access to quality education, focusing on foundational literacy and numeracy skills. They implement         programs such as "School Readiness Program" and "Library in Every School" to improve learning outcomes among underprivileged children
+              <li>Schools and communities can collaborate with Akshara Foundation to implement their programs and establish libraries.</li>
+              <li>Parents and children can participate in Akshara Foundation's educational programs by enrolling in their community-based initiatives or contacting their local offices for support.</li>
+            </p>
+            <br>
+        </div>
       </div>
 
  <!-- FOR PUNJAB  -->
       <div class="PunjabTXT" id="PunjabTXT">
-        <b></b>
+        <br><br>
         <h5>Dr. Hargobind Khurana Scholarship Scheme:</h5>
         <p>
           <li>This scholarship is offered to students belonging to economically weaker sections of society for pursuing higher education </li>

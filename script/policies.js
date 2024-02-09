@@ -3,13 +3,14 @@ function showAllHeads(){
         document.getElementById("mainHeads").style.display='block';
     }
     else{  
-        document.getElementById("mainHeads").style.display='none';
+        document.getElementById("mainHeads").style.display='none'; 
+        document.getElementById("specHeads").style.display='none';
     }
 }
 
 
 
-function catEduTxt() {
+function catEduTxt(){
     if(document.getElementById("Nat").innerHTML==""){
         document.getElementById("specHeads").style.display='block';
         document.getElementById("Nat").innerHTML = document.getElementById("eduNat").innerHTML;
@@ -28,41 +29,46 @@ function catEduTxt() {
 }
 
 function catHealthTxt() {
-
-    // if(document.getElementById("Nat").innerHTML==""){
-    //     document.getElementById("Nat").innerHTML = document.getElementById("eduNat").innerHTML;
-    //     document.getElementById("eduNat").style.display = 'block';
-    //     document.getElementById("Stat").innerHTML = document.getElementById("eduState").innerHTML;
-    //     document.getElementById("eduState").style.display = 'block';
-    //     document.getElementById("ngo").innerHTML = document.getElementById("eduNgo").innerHTML; 
-    //     document.getElementById("eduNgo").style.display = 'block';
-    // }
-    // else{
-    //     document.getElementById("Nat").innerHTML = "";
-    //     document.getElementById("Stat").innerHTML = "";
-    //     document.getElementById("ngo").innerHTML = ""; 
-    // }
     hideAllTxt();
+    if(document.getElementById("Nat").innerHTML==""){
+        document.getElementById("specHeads").style.display='block';
+        document.getElementById("Nat").innerHTML = document.getElementById("eduNat").innerHTML;
+        document.getElementById("eduNat").style.display = 'block';
+        document.getElementById("Stat").innerHTML = document.getElementById("eduState").innerHTML;
+        document.getElementById("eduState").style.display = 'block';
+        document.getElementById("ngo").innerHTML = document.getElementById("eduNgo").innerHTML; 
+        document.getElementById("eduNgo").style.display = 'block';
+    }
+    else{
+        // document.getElementById("specHeads").style.display='none';
+        document.getElementById("Nat").innerHTML = "";
+        document.getElementById("Stat").innerHTML = "";
+        document.getElementById("ngo").innerHTML = "";
+    }
 }
 
 function catNutriTxt() {
-    // if(document.getElementById("Nat").innerHTML==""){
-    //     document.getElementById("Nat").innerHTML = document.getElementById("eduNat").innerHTML;
-    //     document.getElementById("eduNat").style.display = 'block';
-    //     document.getElementById("Stat").innerHTML = document.getElementById("eduState").innerHTML;
-    //     document.getElementById("eduState").style.display = 'block';
-    //     document.getElementById("ngo").innerHTML = document.getElementById("eduNgo").innerHTML; 
-    //     document.getElementById("eduNgo").style.display = 'block';
-    // }
-    // else{
-    //     document.getElementById("Nat").innerHTML = "";
-    //     document.getElementById("Stat").innerHTML = "";
-    //     document.getElementById("ngo").innerHTML = ""; 
-    // }
     hideAllTxt();
+    if(document.getElementById("Nat").innerHTML==""){
+        document.getElementById("specHeads").style.display='block';
+        document.getElementById("Nat").innerHTML = document.getElementById("eduNat").innerHTML;
+        document.getElementById("eduNat").style.display = 'block';
+        document.getElementById("Stat").innerHTML = document.getElementById("eduState").innerHTML;
+        document.getElementById("eduState").style.display = 'block';
+        document.getElementById("ngo").innerHTML = document.getElementById("eduNgo").innerHTML; 
+        document.getElementById("eduNgo").style.display = 'block';
+    }
+    else{
+        // document.getElementById("specHeads").style.display='none';
+        document.getElementById("Nat").innerHTML = "";
+        document.getElementById("Stat").innerHTML = "";
+        document.getElementById("ngo").innerHTML = "";
+    }
+    
 }
 
 function catDevTxt() {
+    hideAllTxt();
     if(document.getElementById("Nat").innerHTML==""){
         document.getElementById("Nat").innerHTML = document.getElementById("eduNat").innerHTML;
         document.getElementById("eduNat").style.display = 'block';
