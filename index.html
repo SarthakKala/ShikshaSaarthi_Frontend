@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shiksha Saarthi</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.0/dist/typeit.min.js"></script>
     <style>
       body{
         /* background-image: url("https://images.squarespace-cdn.com/content/v1/5421b6e2e4b0a6db313b8b24/1613932175243-LWAQF519CTRPKQN4XJVC/image-from-rawpixel-id-2620215-jpeg.jpg"); */
@@ -74,7 +75,7 @@
         width: 30%;
         display: flex;
         flex-direction: column;
-        margin-top: 50px;
+        margin-top: 25px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       }
 
@@ -387,7 +388,8 @@
   width: 350px;
   height: 180px;
   box-sizing: border-box;
-  background-color: #212121;
+  background-color: rgb(23, 23, 23);
+  /* background-image: url(uploads/card_bg.jpg); */
   border: 5px solid #222;
   border-radius: 8px;
   display: flex;
@@ -483,7 +485,8 @@
 }
 
 .head1{
-  font-size: 60px;
+  font-size: 55px;
+  padding-bottom: 50px;
 }
 
 .head2{
@@ -553,8 +556,8 @@
       <div class="main">
         <div class="box">
           <div class="pic">
-            <div class="left">
-              <h2 class="head1"><span><b>HELLO </b></span><span class="cursor" style="font-family: myFirstFont; ">SARTHAK,</span></h2>
+            <div class="left" >
+              <h2 class="head1" id="typing-text"><span><b>HELLO </b></span><span class="cursor" style="font-family: myFirstFont; ">SARTHAK,</span></h2>
               <br><br>
               <h2 class="head2"><b>WELCOME TO <br> SHIKSHA SAARTHI.</b></h2>
               <p class="land head3"><b></b>THE CORRECT <br> PLACE TO LEARN<br> AND BE <br>EDUCATED</b></p>
@@ -728,5 +731,20 @@
 </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script>
+      const typingText = new TypeIt("#typing-text", {
+        speed: 200,
+        loop: true,
+        cursor: "_"
+      });
+      typingText
+        // .type("HELLO SARTHAK,")
+        .pause(4000)
+        .delete(11)
+        // .type("HELLO SARTHAK")
+        .go();
+    </script>
+
   </body>
 </html>
