@@ -268,7 +268,9 @@
     .three{
       display: flex;
       flex-wrap: wrap;
-      
+      justify-content: space-evenly;
+      margin-top: 100px;
+      margin-bottom: 100px;
     }
 
     /* card */
@@ -370,6 +372,7 @@
 
 .text{
   margin: auto;
+  text-align: center;
 }
 
 .text h2{
@@ -409,11 +412,13 @@
 
 .card-title {
   margin: 0;
-  font-size: 18px;
+  font-size: 30px;
+  text-align: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-weight: 600;
-  color: #fff;
+  color: #d0d3e9;
+
   cursor: default;
 }
 
@@ -450,6 +455,11 @@
   transition: all ease-in-out 0.3s;
   animation: textanimate 0.8s alternate infinite;
   cursor: pointer;
+}
+
+.View_more{
+  text-decoration: none;
+  color: white;
 }
 
 .card:hover > .card-text {
@@ -539,21 +549,21 @@
       <!-- Cards -->
       <div class="cards">
         <!-- <img src="uploads/bg_home2.png"> -->
-        <div class="text">
+        <div class="text" >
           <h2>THE RESOURCES THAT WE OFFER</h2>
         </div>
           <div class="three">
             
             <div class="card">
-              <p class="card-title">Card Title</p>
-              <p class="card-des">
+              <p class="card-title">Education</p>
+              <!-- <p class="card-des">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
                 deleniti officia. Aliquam repellendus illum pariatur nesciunt dolor et
                 natus consectetur repudiandae suscipit autem distinctio commodi vel sed,
                 id inventore modi.
-              </p>
+              </p> -->
               <p class="card-text">
-                <span>View More</span>
+                <span ><a href="Education.html" class="View_more">View More</a></span>
                 <svg class="arrow-icon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                 </svg>
@@ -562,15 +572,15 @@
 
 
             <div class="card">
-              <p class="card-title">Card Title</p>
-              <p class="card-des">
+              <p class="card-title">Policies</p>
+              <!-- <p class="card-des">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
                 deleniti officia. Aliquam repellendus illum pariatur nesciunt dolor et
                 natus consectetur repudiandae suscipit autem distinctio commodi vel sed,
                 id inventore modi.
-              </p>
+              </p> -->
               <p class="card-text">
-                <span>View More</span>
+                <span ><a href="policies.html" class="View_more">View More</a></span>
                 <svg class="arrow-icon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                 </svg>
@@ -579,15 +589,15 @@
 
 
             <div class="card">
-              <p class="card-title">Card Title</p>
-              <p class="card-des">
+              <p class="card-title">Mentor</p>
+              <!-- <p class="card-des">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
                 deleniti officia. Aliquam repellendus illum pariatur nesciunt dolor et
                 natus consectetur repudiandae suscipit autem distinctio commodi vel sed,
                 id inventore modi.
-              </p>
+              </p> -->
               <p class="card-text">
-                <span>View More</span>
+                <span ><a href="#" class="View_more">View More</a></span>
                 <svg class="arrow-icon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                 </svg>
@@ -595,35 +605,21 @@
             </div>
           </div>
 
-          <div class="three">
-            <div class="card">
-              <p class="card-title">Card Title</p>
-              <p class="card-des">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
-                deleniti officia. Aliquam repellendus illum pariatur nesciunt dolor et
-                natus consectetur repudiandae suscipit autem distinctio commodi vel sed,
-                id inventore modi.
-              </p>
-              <p class="card-text">
-                <span>View More</span>
-                <svg class="arrow-icon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
-                </svg>
-              </p>
-            </div>
+
 
 
           <div class="three">
+            
             <div class="card">
-              <p class="card-title">Card Title</p>
-              <p class="card-des">
+              <p class="card-title">Jobs</p>
+              <!-- <p class="card-des">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
                 deleniti officia. Aliquam repellendus illum pariatur nesciunt dolor et
                 natus consectetur repudiandae suscipit autem distinctio commodi vel sed,
                 id inventore modi.
-              </p>
+              </p> -->
               <p class="card-text">
-                <span>View More</span>
+                <span ><a href="jobs.html" class="View_more">View More</a></span>
                 <svg class="arrow-icon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                 </svg>
@@ -631,25 +627,43 @@
             </div>
 
 
-
             <div class="card">
-              <p class="card-title">Card Title</p>
-              <p class="card-des">
+              <p class="card-title">News</p>
+              <!-- <p class="card-des">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
                 deleniti officia. Aliquam repellendus illum pariatur nesciunt dolor et
                 natus consectetur repudiandae suscipit autem distinctio commodi vel sed,
                 id inventore modi.
-              </p>
+              </p> -->
               <p class="card-text">
-                <span>View More</span>
+                <span ><a href="News/News.html" class="View_more">View More</a></span>
                 <svg class="arrow-icon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
                 </svg>
               </p>
             </div>
-       </div>
+
+
+            <div class="card">
+              <p class="card-title">Contact Us</p>
+              <!-- <p class="card-des">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis,
+                deleniti officia. Aliquam repellendus illum pariatur nesciunt dolor et
+                natus consectetur repudiandae suscipit autem distinctio commodi vel sed,
+                id inventore modi.
+              </p> -->
+              <p class="card-text">
+                <span ><a href="Contact_us.html" class="View_more">View More</a></span>
+                <svg class="arrow-icon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"></path>
+                </svg>
+              </p>
+            </div>
+          </div>
     </div>
-  </div>
+
+
+
         <!-- Site footer -->
     <footer class="site-footer">
       <div class="container">
