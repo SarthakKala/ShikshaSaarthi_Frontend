@@ -79,6 +79,7 @@
       .heading li{
         color: rgb(156, 70, 236);
         padding: 8px;
+        list-style: circle;
       }
 
       .heading li:hover{
@@ -147,6 +148,7 @@
       }
 
       .eduNat li{
+        list-style: circle;
         display: none;
       }
       
@@ -327,9 +329,9 @@
     }
 
     .card {
-      overflow: visible;
+      /* overflow: visible;
       width: 190px;
-      height: 254px;
+      height: 254px; */
     }
 
     .cards{
@@ -607,22 +609,49 @@ body {
 }
 
     .schemeLinks{
-      /* display: none; */
+      display: none;
       font: bold;
-      cursor: pointer;
       background-color: #9491e7;
       margin: 10%;
       padding: 5%;
     }
 
     .schemeLinks li{
+      cursor: pointer;
       border: #000117;
+      color: #000000;
+      font-weight: bolder;
     }
     .schemeLinks a{
-      color: antiquewhite;
+      color: rgb(255, 255, 255);
       font-family: 'Times New Roman', Times, serif;
       font-size: larger;
+      text-decoration: none;
       /* background-color: #c896fb; */
+    }
+
+    .Nat{
+      color: rgb(0, 0, 0);
+    }
+
+    .ngo h5{
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    .ngo p{
+      font-weight: normal;
+      font-family: 'Times New Roman', Times, serif;
+      margin-bottom: 2%;
+    }
+
+    .ngo li{
+      list-style: disc;
+    }
+
+    .statTxt h5{
+      font-style: italic;
+      font-weight: bold;
     }
 
     </style>
@@ -702,23 +731,25 @@ body {
         <input type="button" class="showAll ms-3" id="showAll" onclick="showAllScheme()" value="Links to all schemes">
       <!-- </center> -->
 
-      <div class="schemeLinks">
+      <div class="schemeLinks card" id="schemeLinks">
         <ul>
-          <li><a href="https://scholarships.gov.in/" target="_blank">www.scholarships.gov.in</a></li>
-          <li><a href="https://www.mha.gov.in/en/about-us/central-armed-police-forces" target="_blank">www.mha.gov.in/en/about-us/central-armed-police-forces</a></li>
-          <li><a href="https://www.mygov.in/work-at-mygov/" target="_blank">www.mygov.in/work-at-mygov</a></li>
-          <li><a href="https://services.india.gov.in/service/listing?cat_id=2&ln=en" target="_blank">www.services.india.gov.in/service/listing?cat_id=2&ln=en</a></li>
-          <li><a href="https://www.mygov.in/" target="_blank">www.mygov.in</a></li>
+          <li>&rarr;<a href="https://scholarships.gov.in/" target="_blank">scholarships.gov.in</a></li>
+          <li>&rarr;<a href="https://www.mha.gov.in/en/about-us/central-armed-police-forces" target="_blank">mha.gov.in/en/about-us/central-armed-police-forces</a></li>
+          <li>&rarr;<a href="https://www.mygov.in/work-at-mygov/" target="_blank">mygov.in/work-at-mygov</a></li>
+          <li>&rarr;<a href="https://services.india.gov.in/service/listing?cat_id=2&ln=en" target="_blank">services.india.gov.in/service/listing?cat_id=2&ln=en</a></li>
+          <li>&rarr;<a href="https://www.mygov.in/" target="_blank">mygov.in</a></li>
         </ul>
       </div>
 
       <br><br>
+      <center>
       <ul id="mainHeads" class="mainHeads">
         <li class="box" onclick="catEduTxt()">Education</li>
         <li class="box" onclick="catHealthTxt()">HealthCare</li>
         <li class="box" onclick="catNutriTxt()">Nutrition</li>
         <li class="box" onclick="catDevTxt()">Community Development</li>
       </ul>
+    </center>
 
       <div class="specHeads" id="specHeads">
 
@@ -820,7 +851,7 @@ body {
             <option id="West" value="West">West Bengal</option>
           </div>
         </select>
-        <span class="statTxt" id="statTxt"></span>
+        <span class="statTxt" id="statTxt" style="text-align: justify;"></span>
       </center>
       </div>
     
@@ -829,15 +860,14 @@ body {
       <div class="eduNgo" id="eduNgo">
         <div class="p">
             <h5>Pratham:</h5>
-            Pratham is one of the largest NGOs working towards the provision of quality education to underprivileged children in India. Their initiatives include the "Read India" campaign, "Learning Camps," and "Pratham Institute," which focus on literacy and numeracy skills among children and youth
+            <p>Pratham is one of the largest NGOs working towards the provision of quality education to underprivileged children in India. Their initiatives include the "Read India" campaign, "Learning Camps," and "Pratham Institute," which focus on literacy and numeracy skills among children and youth</p>
               <li>Pratham's programs are often implemented in collaboration with local schools or community centers.</li>
               <li>Beneficiaries can directly participate in Pratham's learning camps or vocational training programs by contacting their local Pratham chapter or visiting their website for more information.</li>
             <br>
             <h5>Akshara Foundation:</h5>
-            <p>Akshara Foundation works to ensure every child has access to quality education, focusing on foundational literacy and numeracy skills. They implement         programs such as "School Readiness Program" and "Library in Every School" to improve learning outcomes among underprivileged children
+            <p>Akshara Foundation works to ensure every child has access to quality education, focusing on foundational literacy and numeracy skills. They implement         programs such as "School Readiness Program" and "Library in Every School" to improve learning outcomes among underprivileged children</p>
               <li>Schools and communities can collaborate with Akshara Foundation to implement their programs and establish libraries.</li>
               <li>Parents and children can participate in Akshara Foundation's educational programs by enrolling in their community-based initiatives or contacting their local offices for support.</li>
-            </p>
         </div>
       </div>
 
