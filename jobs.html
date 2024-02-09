@@ -236,8 +236,9 @@
 
             // Make the API request
             $.ajax(apiSettings).done((response) => {
-              console.log(response)
+              console.log(response.content);
               displayJobs(response.data);
+              document.getElementById("jobContainer").innerHTML=response.content;
             });
           });
       </script>
