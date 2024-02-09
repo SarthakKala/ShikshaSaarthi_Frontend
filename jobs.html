@@ -181,9 +181,11 @@
         
         <div class="left card">
           <div class="card search">
+            <form id="job-search-form">
             <input type="text" id="jobSearchInput" placeholder="Enter Jobs according to your interest">
             <button id="searchButton">Search</button>
-          </div>
+          </form>
+          </div>  
         </div>
         <div id="jobContainer" class="job_cont"></div>
 
@@ -234,7 +236,8 @@
 
             // Make the API request
             $.ajax(apiSettings).done((response) => {
-              displayJobs(response.matches);
+              console.log(response)
+              displayJobs(response.data);
             });
           });
       </script>
