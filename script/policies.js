@@ -1,4 +1,7 @@
 function showAllHeads(){
+    if(document.getElementById("schemeLinks").style.display=='block'){
+        document.getElementById("schemeLinks").style.display='none';
+    }
     if(document.getElementById("mainHeads").style.display=='none'){
         document.getElementById("mainHeads").style.display='block';
     }
@@ -117,5 +120,13 @@ function hideAllTxt(){
 }
 
 function showAllScheme(){
-    
+    if(document.getElementById("mainHeads").style.display=='block'){
+        document.getElementById("mainHeads").style.display='none';
+    }
+    if(document.getElementById("schemeLinks").style.display=='none'){
+        document.getElementById("schemeLinks").style.display='block';
+    }
+    else{  
+        document.getElementById("schemeLinks").style.display='none';
+    }
 }
