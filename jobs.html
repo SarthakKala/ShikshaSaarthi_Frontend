@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Jobs</title>
     <link
      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="style/style.css"> -->
@@ -14,7 +14,7 @@
     <style>
         body{
         /* background-image: url("https://images.squarespace-cdn.com/content/v1/5421b6e2e4b0a6db313b8b24/1613932175243-LWAQF519CTRPKQN4XJVC/image-from-rawpixel-id-2620215-jpeg.jpg"); */
-        background-image: url("uploads/bg_home2_flip.png");
+        background-image: url("uploads/bg_education.jpg");
         background-color: #000117;
         background-position: center;
         background-repeat: no-repeat;
@@ -54,7 +54,7 @@
         /* background-color: #9f0fcb; */
         font-family: 'Times New Roman', Times, serif;
         border-radius: 1%;
-        color: #ffffff;
+        color: #141414;
         width: 500px;
         /* margin: auto; */
         text-align: center;
@@ -65,32 +65,34 @@
         display: flex;
         width: 90%;
         margin: auto;
-        background-color: #dfb8fa;
+        background-color: #f4f0f7;
+        border-radius: 10%;
       }
 
       .right{
-        padding: auto;
         width: 20%;
         color: #000117;
-        background-color: #dfb8fa;
+        background-color: rgb(244, 240, 247);
         overflow-y: auto;
         height: 350px;
         max-height: 500px;
+        scrollbar-width: thin;
+        scrollbar-color: rgb(166, 92, 240) rgb(244, 240, 247);
       }
 
       .right ul{
         list-style: none;
         padding: 10px;
-        margin: auto;
-        text-align: center;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-bottom: 3%;
+        text-align: left;
+        font-family:'Times New Roman', Times, serif;
         cursor: pointer;
       }
 
       .left{
         width: 80%;
         height: auto;
-        background-color: #dfb8fa;
+        background-color: rgb(244, 240, 247);
       }
 
       .search{
@@ -99,23 +101,36 @@
         margin: auto;
       }
 
-      .job_cont{
-        background-color: black;
-        color: rgb(255, 38, 38);
+      .jobContainer{
+        background-color: rgb(255, 249, 224);
+        color: rgb(40, 3, 51);
         text-align: center;
-        width:300px ;
-        height:100px ;
+        width:95%;
+        height:80%;
+        margin: auto;
       }
+
+      .jobSearchInput{
+        width: 80%;
+        float: left;
+      }
+
+      .searchButton{
+        width: 20%;
+        float: right;
+        margin: auto;
+      }
+
 
     </style>
 
   </head>
-  <body data-bs-theme="dark">
+  <body >
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <div class="rightnav">
-          <a class="navbar-brand " href="#"><img src="uploads/LOGO_Name-02.png" alt="Shiksha Saarthi" width="250" ></a>
+          <a class="navbar-brand " href="#"><img src="uploads/LOGO_Name-01.png" alt="Shiksha Saarthi" width="250" ></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -168,26 +183,19 @@
                 <li>Software engineer</li>
                 <li>Clerk</li>
                 <li>Data Scientist</li>
-                <li>Techinal Supervisor</li>
-                <li>Charted Accountant</li>
-                <li>Software engineer</li>
-                <li>Clerk</li>
-                <li>Data Scientist</li>
-                <li>Techinal Supervisor</li>
-                <li>Charted Accountant</li>
                 <li>Others</li>
             </ul>
         </div>
         
         <div class="left card">
-          <div class="card search">
+          <div class="search card">
             <form id="job-search-form">
-            <input type="text" id="jobSearchInput" placeholder="Enter Jobs according to your interest">
-            <button id="searchButton">Search</button>
-          </form>
+              <input type="text" id="jobSearchInput" class="jobSearchInput" placeholder="Enter Jobs according to your interest">
+              <input type="submit" id="searchButton" class="searchButton">
+            </form>
+            <div id="jobContainer" class="jobContainer"></div>
           </div>  
         </div>
-        <div id="jobContainer" class="job_cont"></div>
 
     <script>
           // LinkedIn Jobs API settings
@@ -197,7 +205,7 @@
             url: "https://rapid-linkedin-jobs-api.p.rapidapi.com/search-jobs",
             method: "GET",
             headers: {
-              "X-RapidAPI-Key": "6dfc42ca1dmshf42eb6a8f439983p1856f6jsn0a4eb5d6e779",
+              "X-RapidAPI-Key": "3b13d9cfeamshfbac5b83c534ca9p1dc311jsnbb7b1fb6f141",
               "X-RapidAPI-Host": "rapid-linkedin-jobs-api.p.rapidapi.com",
             },
           };
