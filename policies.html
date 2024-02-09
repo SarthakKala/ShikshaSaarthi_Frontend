@@ -12,7 +12,7 @@
         background-position: center;
         background-repeat: no-repeat;
         /* background-size: cover; */
-        height: 100%;
+        /* height: 100%; */
       }
 
       .navbar-nav{
@@ -52,6 +52,7 @@
         color: #1c0345;
         text-align: justify;
         font-family: Georgia, 'Times New Roman', Times, serif;
+        /* display: flex; */
       }
 
       .heading h1{
@@ -397,8 +398,233 @@
       /* border: 2px solid #544caf; */
       border-radius: 0px 15px 15px 15px;
       box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-
     }
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+    /* Circle with Pic */
+  
+* {
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+}
+body {
+  background-color: #E9D9FF;
+}
+.main-container {
+  min-height: 100px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  height: 400px;
+  overflow: hidden;
+}
+.main {
+  margin: 0px auto;
+  width: 380px;
+  height: 380px;
+  position: relative;
+}
+.big-circle {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border: 3px solid #d0a6fd;
+  border-radius: 50%;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  animation: Rotate 20s linear infinite;
+  -webkit-animation: Rotate 20s linear infinite;
+}
+.icon-block {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  background-image: linear-gradient(180deg, #c6b0f1 0%, #c297db 100%);
+  -webkit-background-image: linear-gradient(180deg, #bdadda 0%, #d39ce9 100%);
+  box-shadow: 0 2px 4px 0 #3e5ada;
+  -webkit-box-shadow: 0 2px 4px 0 #3e5ada;
+}
+.icon-block img {
+  margin: 0px auto;
+  width: 86%;
+  animation: Rotate-reverse 20s linear infinite;
+  -webkit-animation: Rotate-reverse 20s linear infinite;
+}
+.icon-block:first-child {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.icon-block:nth-child(2) {
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  -webkit-transform: translate(50%, -50%);
+}
+.icon-block:nth-child(3) {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  -webkit-transform: translate(-50%, 50%);
+}
+.icon-block:nth-child(4) {
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+/* circle content */
+.circle {
+  animation: circle-rotate 20s linear infinite;
+  -webkit-animation: circle-rotate 20s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  width: 75%;
+  height: 75%;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+}
+.circle .icon-block img {
+  animation: img-rotate 20s linear infinite;
+  -webkit-animation: img-rotate 20s linear infinite;
+}
+/* center logo */
+.center-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.center-logo img {
+  max-width: 300px;
+}
+
+/* keyframe animation */
+
+@keyframes Rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes Rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes Rotate-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes Rotate-reverse {
+  from {
+    -webkit-transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@keyframes circle-rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(405deg);
+  }
+}
+
+@-webkit-keyframes circle-rotate {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(405deg);
+  }
+}
+
+@keyframes img-rotate {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(-405deg);
+  }
+}
+
+@-webkit-keyframes img-rotate {
+  from {
+    -webkit-transform: rotate(-45deg);
+  }
+  to {
+    -webkit-transform: rotate(-405deg);
+  }
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.left{
+  width: 50%;
+  height: 400px;
+  float: left;
+}
+
+.right{
+  width: 50%;
+  height: 400px;
+  float: right;
+}
+
+    .schemeLinks{
+      /* display: none; */
+      font: bold;
+      cursor: pointer;
+      background-color: #9491e7;
+      margin: 10%;
+      padding: 5%;
+    }
+
+    .schemeLinks li{
+      border: #000117;
+    }
+    .schemeLinks a{
+      color: antiquewhite;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: larger;
+      /* background-color: #c896fb; */
+    }
+
     </style>
     <script src="script/policies.js"></script>
   </head>
@@ -408,7 +634,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <div class="rightnav">
-          <a class="navbar-brand " href="#"><img src="uploads/LOGO_Name-01.png" alt="Shiksha Saarthi" width="250" ></a>
+          <a class="navbar-brand " href="index.html"><img src="uploads/LOGO_Name-01.png" alt="Shiksha Saarthi" width="250" ></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -448,15 +674,43 @@
         </div>
     </nav>
 
-    <div class="heading">
-      <h1>Government Initiatives & Scholarships</h1>  
-      <br><br>
-      <p>Welcome to a gateway of opportunities for a brighter tomorrow. This page unfolds the tapestry of government policies aimed at uplifting communities through education, healthcare, and overall well-being. Discover the scholarships that can be a stepping stone towards a future filled with possibilities. Let's embark on a journey of empowerment together.</p>
 
-      <center>
+    <div class="heading">
+      
+        <h1>Government Initiatives & Scholarships</h1>  
+        <div class="left">
+          <br><br>
+          <p>Welcome to a gateway of opportunities for a brighter tomorrow. This page unfolds the tapestry of government policies aimed at uplifting communities through education, healthcare, and overall well-being. Discover the scholarships that can be a stepping stone towards a future filled with possibilities. Let's embark on a journey of empowerment together.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae perferendis ex velit? Eum quaerat corrupti, commodi sint, explicabo voluptas ab vel, amet ipsam quis ratione repellendus quos dolore. Magnam ducimus officia beatae deleniti ad odio iusto. Odit maxime ea cumque voluptas assumenda aspernatu</p>
+        </div>
+        <div class="main-container right">
+          <div class="main">
+            <div class="big-circle">
+              <div class="icon-block"></div>
+              <div class="icon-block"></div>
+              <div class="icon-block"></div>
+              <div class="icon-block"></div>
+            </div>
+            <div class="center-logo">
+              <img src="uploads/policyyy.png" alt="logo" />
+            </div>
+          </div>
+        </div>
+      <!-- <center> -->
         <!-- <input >Show All</input> -->
         <input type="button" class="showAll" id="showAll" onclick="showAllHeads()" value="Show All">
-      </center>
+        <input type="button" class="showAll ms-3" id="showAll" onclick="showAllScheme()" value="Links to all schemes">
+      <!-- </center> -->
+
+      <div class="schemeLinks">
+        <ul>
+          <li><a href="https://scholarships.gov.in/" target="_blank">www.scholarships.gov.in</a></li>
+          <li><a href="https://www.mha.gov.in/en/about-us/central-armed-police-forces" target="_blank">www.mha.gov.in/en/about-us/central-armed-police-forces</a></li>
+          <li><a href="https://www.mygov.in/work-at-mygov/" target="_blank">www.mygov.in/work-at-mygov</a></li>
+          <li><a href="https://services.india.gov.in/service/listing?cat_id=2&ln=en" target="_blank">www.services.india.gov.in/service/listing?cat_id=2&ln=en</a></li>
+          <li><a href="https://www.mygov.in/" target="_blank">www.mygov.in</a></li>
+        </ul>
+      </div>
 
       <br><br>
       <ul id="mainHeads" class="mainHeads">
@@ -470,26 +724,32 @@
 
         <span class="NatHead" id="NatHead">
           <ul>
-            <li><h3>NATIONAL SCHOLARSHIP</h3></li>
+            <li><h3><u>NATIONAL SCHOLARSHIP</u></h3></li>
             <span class="Nat" id="Nat" onload="hideAllTxt()"></span>
           </ul>
         </span>
 
         <span class="StatHead" id="StatHead">
           <ul>
-            <li><h3>STATE-SPECIFIC SCHOLARSHIPS </h3></li>
+            <li><h3><u>STATE-SPECIFIC SCHOLARSHIPS</u></h3></li>
             <span class="Stat" id="Stat" onload="hideAllTxt()"></span>
           </ul>
         </span>
 
         <span class="ngoHead" id="ngoHead">
           <ul>
-            <li><h3>NGO INITIATIVES </h3></li>
+            <li><h3><u>NGO INITIATIVES</u></h3></li>
             <span class="ngo" id="ngo" onload="hideAllTxt()"></span>
           </ul>
         </span>
-
       </div>
+    </div>
+
+    <!-- <div class="sundr container">
+      <div class="niche ">
+        <img src="uploads/policyyy.png" class="img2">
+      </div>
+    </div> -->
 
 
 <!-- National -->
@@ -524,7 +784,9 @@
 
 
 <!-- State wise -->
+    
      <div class="eduState" id="eduState">
+      <center>
         <select name="states" class="states" id="states" onclick="showStatTxt(this)">
           <div class="drop-content">
             <option id="none" value="none">Select State</option>
@@ -559,22 +821,23 @@
           </div>
         </select>
         <span class="statTxt" id="statTxt"></span>
+      </center>
       </div>
+    
 
 <!-- By NGOs -->
       <div class="eduNgo" id="eduNgo">
         <div class="p">
-          <h5>Pratham:</h5>
-          Pratham is one of the largest NGOs working towards the provision of quality education to underprivileged children in India. Their initiatives include the "Read India" campaign, "Learning Camps," and "Pratham Institute," which focus on literacy and numeracy skills among children and youth
-            <li>Pratham's programs are often implemented in collaboration with local schools or community centers.</li>
-            <li>Beneficiaries can directly participate in Pratham's learning camps or vocational training programs by contacting their local Pratham chapter or visiting their website for more information.</li>
+            <h5>Pratham:</h5>
+            Pratham is one of the largest NGOs working towards the provision of quality education to underprivileged children in India. Their initiatives include the "Read India" campaign, "Learning Camps," and "Pratham Institute," which focus on literacy and numeracy skills among children and youth
+              <li>Pratham's programs are often implemented in collaboration with local schools or community centers.</li>
+              <li>Beneficiaries can directly participate in Pratham's learning camps or vocational training programs by contacting their local Pratham chapter or visiting their website for more information.</li>
             <br>
             <h5>Akshara Foundation:</h5>
             <p>Akshara Foundation works to ensure every child has access to quality education, focusing on foundational literacy and numeracy skills. They implement         programs such as "School Readiness Program" and "Library in Every School" to improve learning outcomes among underprivileged children
               <li>Schools and communities can collaborate with Akshara Foundation to implement their programs and establish libraries.</li>
               <li>Parents and children can participate in Akshara Foundation's educational programs by enrolling in their community-based initiatives or contacting their local offices for support.</li>
             </p>
-            <br>
         </div>
       </div>
 
@@ -619,7 +882,7 @@
         <div class="row">
           <div class="col-sm-12 col-md-6">
             <h6>About Us</h6>
-            <p class="text-justify"></p>
+            <p class="text-justify">We at Shiksha Saarthi aim to provide free access to the basic and required knowledge of the world to the users along with one-to-one mentorship and provision to find jobs for themselves all at one place.</p>
           </div>
 
           <div class="col-xs-6 col-md-3">

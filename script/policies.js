@@ -115,3 +115,7 @@ function hideAllTxt(){
     document.getElementById("Stat").innerHTML = "";
     document.getElementById("ngo").innerHTML = "";
 }
+
+function showAllScheme(){
+    
+}
