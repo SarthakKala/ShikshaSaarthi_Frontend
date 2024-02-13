@@ -104,10 +104,11 @@
       .jobContainer{
         background-color: rgb(255, 249, 224);
         color: rgb(40, 3, 51);
-        text-align: center;
+        text-align: left;
         width:95%;
         height:80%;
         margin: auto;
+        overflow-y: auto;
       }
 
       .jobSearchInput{
@@ -173,7 +174,7 @@
     </div>
 
     <div class="box">
-        <div class="right card">
+        <div class="right card selectjobs" id="selectjobs" onclick="goToSearch()">
             <ul>
                 <li>Software engineer</li>
                 <li>Clerk</li>
@@ -205,23 +206,22 @@
             url: "https://rapid-linkedin-jobs-api.p.rapidapi.com/search-jobs",
             method: "GET",
             headers: {
-              "X-RapidAPI-Key": "3b13d9cfeamshfbac5b83c534ca9p1dc311jsnbb7b1fb6f141",
+              "X-RapidAPI-Key": "05acfd8d5amshdcdf88de3727b2ap1241b5jsnaf091933d1ff",
               "X-RapidAPI-Host": "rapid-linkedin-jobs-api.p.rapidapi.com",
             },
           };
 
           // Display jobs on the page
-          const displayJobs = (jobs) => {
+          var displayJobs = (jobs) => {
             const jobContainer = $("#job-container");
             jobContainer.empty();
-
+            // console.log(jobs);
             if (jobs && jobs.length > 0) {
               jobs.forEach((job) => {
                 const jobDiv = $("<div>").addClass("job");
                 const title = $("<h2>").text(job.title.text);
                 const company = $("<p>").text(job.company.name);
                 const location = $("<p>").text(job.location.displayName);
-
                 jobDiv.append(title);
                 jobDiv.append(company);
                 jobDiv.append(location);
@@ -237,16 +237,21 @@
           // Search for jobs when the form is submitted
           $("#job-search-form").submit((event) => {
             event.preventDefault();
-            const searchQuery = $("#search-query").val();
-
+            var searchQuery = $("#jobSearchInput").val()  ;
             // Update the API settings with the search query
+            // apiSettings.url = `https://rapid-linkedin-jobs-api.p.rapidapi.com/search-jobs?keywords="${searchQuery}"&locationId=92000000&datePosted=anyTime&sort=mostRelevant`;
             apiSettings.url = `https://rapid-linkedin-jobs-api.p.rapidapi.com/search-jobs?keywords=${searchQuery}&locationId=92000000&datePosted=anyTime&sort=mostRelevant`;
-
+    
+            
             // Make the API request
             $.ajax(apiSettings).done((response) => {
-              console.log(response.content);
               displayJobs(response.data);
-              document.getElementById("jobContainer").innerHTML=response.content;
+              // console.log(response.data.size());
+              // document.getElementById("jobContainer").innerHTML=response.data[0].title;
+              response.data.forEach(job => {
+              console.log(job.title);
+              document.getElementById("jobContainer").innerHTML += job.title + " " + job.url + "<br>";
+              });
             });
           });
       </script>
