@@ -506,7 +506,7 @@
 
     </style>
   </head>
-  <body data-bs-theme="dark">
+  <body data-bs-theme="dark" onscroll="scrollDown()">
 
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -685,8 +685,6 @@
           </div>
     </div>
 
-
-
         <!-- Site footer -->
     <footer class="site-footer">
       <div class="container">
@@ -731,6 +729,24 @@
 </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- <script>
+      const scrollThreshold = 100; // Scroll down only when the user has scrolled down at least 100 pixels
+      let previousScrollPosition = 0;
+      
+      function scrollDown() {
+        const currentScrollPosition = window.pageYOffset;
+        if (currentScrollPosition > previousScrollPosition + scrollThreshold) {
+          window.scrollBy(0, 590); // Scroll down by 500 pixels
+        }
+        previousScrollPosition = currentScrollPosition;
+      }
+    </script> -->
+    <!-- <script>
+      function scrollDown() {
+        window.scrollBy(0, 500); // Scroll down by 500 pixels
+      }
+    </script> -->
 
     <script>
       const typingText = new TypeIt("#typing-text", {
